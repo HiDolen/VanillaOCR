@@ -1,0 +1,20 @@
+Overall:
+  drop_threshold_after_decode: 0.7
+TextDetector:
+  model_path: G:\models\paddleocr\ch_PP-OCRv4_det_infer.onnx
+  only_cpu: False
+  min_edge_after_resize: 736
+  length_base_number: 32
+  max_w_h_ratio: 8
+  mean: [0.385, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  binary_threshold: 0.3
+  box_threshold: 0.5
+  unclip_ratio: 1.6
+  min_box_size: 3
+TextRecognizer:
+  model_path: G:\models\paddleocr\ch_PP-OCRv4_rec_infer.onnx
+  only_cpu: False
+  batch_size: 6
+  target_image_shape: [48, 320]
+LabelDecoder: ~
